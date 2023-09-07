@@ -1,10 +1,17 @@
 #include <stdio.h>
+
 /**
- * main -A program that prints a line with puts function
- * Return: 0 (success)
+ * main - Entry point of the program
+ *
+ * Description: program prints "Programming is like building
+ * a multilingual puzzle"
+ * using the `puts` function,
+ * then follows the Betty coding and documentation style.
+ *
+ * Return: 0 (SUCCESS)
  */
 int main(void)
 {
-puts("\"programming is like building a multilingual puzzle");
-return (0);
+	puts("Programming is like building a multilingual puzzle");
+	return (0);
 }

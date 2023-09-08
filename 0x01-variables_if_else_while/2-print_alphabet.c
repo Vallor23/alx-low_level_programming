@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - entry point
- * description: 'program that prints in lower case'
+ * description: 'program that prints in lower case alphabet'
  * return : always 0 (SUCESS)
  */
+
 int main(void)
 {
 char letter = 'a';  /* Start with 'a'*/

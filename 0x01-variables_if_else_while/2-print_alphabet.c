@@ -2,7 +2,7 @@
 /**
  * main - entry point
  * description: 'program that prints in lower case'
- * return : always 0
+ * return : always 0 (SUCESS)
  */
 int main(void)
 {
@@ -18,4 +18,3 @@ putchar('\n');  /* Print a newline character*/
 
 return (0);
 }
-

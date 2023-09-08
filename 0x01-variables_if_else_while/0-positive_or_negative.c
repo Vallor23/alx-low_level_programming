@@ -11,7 +11,7 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2i;
+	n = rand() - RAND_MAX / 2;
     /* Check whether the number is positive, negative, or zero */
 if (n > 0)
 {

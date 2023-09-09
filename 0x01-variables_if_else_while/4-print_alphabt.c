@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 /**
  * main - Entry point
  *
@@ -9,18 +9,17 @@
  */
 int main(void)
 {
-char letter = 'a';
-
-while (letter <= 'z')
+int n = 97;
+while (n <= 122)
 {
-if (letter != 'q' && letter != 'e'
-write(1, &letter, 1);
+if (n == 101 || n == 113)
+{
+n++;
+continue;
 }
-letter++;
+putchar(n);
+n++;
 }
-
-write(1, "\n", 1);
-
+putchar('\n');
 return (0);
 }
-

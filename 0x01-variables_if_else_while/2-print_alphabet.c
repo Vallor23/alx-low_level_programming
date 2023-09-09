@@ -1,13 +1,13 @@
 #include <stdio.h>
-
 /**
- * main - entry point
+ * main - Entry point
+ *
  * Description: This program prints the lowercase alphabet
  *              followed by a newline character.
  *
- * Return : always 0 (SUCESS)
+ * Return: Always 0 (Success)
  */
- int main(void)
+int main(void)
 {
 char letter = 'a';  /* Start with 'a'*/
 

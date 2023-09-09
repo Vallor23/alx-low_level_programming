@@ -2,8 +2,10 @@
 
 /**
  * main - entry point
- * description: 'program that prints in lower case alphabet'
- * return : always 0 (SUCESS)
+ * Description: This program prints the lowercase alphabet
+ *              followed by a newline character.
+ *
+ * Return : always 0 (SUCESS)
  */
  int main(void)
 {

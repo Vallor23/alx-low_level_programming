@@ -11,16 +11,10 @@
  */
 int main(void)
 {
-putchar('0');     /* Print the digit 0 */
-putchar('\n');  /* Print a newline character */
-
-for (int i = 1; i <= 9; i++)
+for (int n = 1; n <= 9; n++)
 {
-putchar(i + '0');  /** Convert the integer to its character
-		    * representation and print it
-		    */
-putchar('\n');      /* Print a newline character after each digit */
+putchar(n + 48);
 }
-
+putchar('\n');
 return (0);
 }

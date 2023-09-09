@@ -11,7 +11,8 @@
  */
 int main(void)
 {
-for (int n = 1; n <= 9; n++)
+int n;
+for (n = 1; n <= 9; n++)
 {
 putchar(n + 48);
 }

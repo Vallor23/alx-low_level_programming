@@ -3,17 +3,19 @@
 /**
  * main - Entry point
  *
- * Description: Prints all single-digit numbers in base 10,
- *              starting from 0 and followed by a new line.
+ * Description:  prints all single digit numbers of base 10 starting from 0,
+ *               followed by a new line.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-for (int i = 0; i <= 9; i++)
-{
-printf("%d\n", i);
-}
+int n;
 
+for (n = 0; n <= 10; n++)
+{
+printf("%d", n);
+}
+printf("\n");
 return (0);
 }

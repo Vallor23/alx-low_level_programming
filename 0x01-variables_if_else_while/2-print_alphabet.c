@@ -5,8 +5,7 @@
  * description: 'program that prints in lower case alphabet'
  * return : always 0 (SUCESS)
  */
-
-int main(void)
+ int main(void)
 {
 char letter = 'a';  /* Start with 'a'*/
 

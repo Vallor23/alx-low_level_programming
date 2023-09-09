@@ -10,12 +10,11 @@
  */
 int main(void)
 {
-for (char letter = 'z'; letter >= 'a'; letter--)
+int n;
+for (n = 122; n <= 97; n--)
 {
-putchar(letter); /* Print the current letter */
+putchar(n);
 }
-
-putchar('\n'); /* Print a newline character */
-
+putchar('\n');
 return (0);
 }

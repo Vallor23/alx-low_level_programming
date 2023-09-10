@@ -10,26 +10,27 @@
  */
 int main(void)
 {
-    int i, j;
+int num1, num2;
 
-    for (i = 0; i <= 99; i++)15.       {
-15.        for (j = i; j <= 99; j++)
-16.    {
-16.            putchar((i / 10) + '0');
-17.            putchar((i % 10) + '0');
-18.            putchar(' ');
-19.            putchar((j / 10) + '0');
-20.            putchar((j % 10) + '0');
-21.
-22.            if (i != 99 || j != 99)
-23.     {
-24.                putchar(',');
-25.                putchar(' ');
-26.            }
-27.        }
-28.    }
-29.
-30.   putchar('\n');
-31.
-32.    return (0);
-33.}
+for (num1 = 0; num1 <= 98; num1++)
+{
+for (num2 = num1 + 1; num2 <= 99; num2++)
+{
+putchar((num1 / 10) + '0');
+putchar((num1 % 10) + '0');
+putchar(' ');
+putchar((num2 / 10) + '0');
+putchar((num2 % 10) + '0');
+
+if (num1 == 98 && num2 == 99)
+continue;
+
+putchar(',');
+putchar(' ');
+}
+}
+
+putchar('\n');
+
+return (0);
+}

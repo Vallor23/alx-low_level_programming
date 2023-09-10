@@ -11,14 +11,16 @@
  */
 int main(void)
 {
-int i = 30;
-int n = 61;
-while (i <= 39)
-while (n <= 66)
+int i = 48;
+int n = 97;
+while (i <= 57)
+while (n <= 102)
 
 {
-putchar(n);
 putchar(i);
+i++;
+putchar(n);
+n++;
 }
 
 /* Print a newline character */

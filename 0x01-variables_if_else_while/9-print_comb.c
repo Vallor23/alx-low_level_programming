@@ -17,6 +17,7 @@ while (number < 10)
 putchar(number + 48); /** Convert the number to its ASCII
 			* representation and print
 			*/
+if (number < 9)
 {
 putchar(',');   /* Print the comma*/
 putchar(' ');   /* Print the space*/

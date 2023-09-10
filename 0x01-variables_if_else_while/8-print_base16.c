@@ -11,18 +11,18 @@
  */
 int main(void)
 {
-int i = 48;
-int n = 97;
-while (i <= 57)
-while (n <= 102)
-
+int i = 48;        /*ASCII value for '0'*/
+int n = 97;       /*ASCII value for 'a'*/
+while (i <= 57)/*Print digits '0' to '9'*/
 {
 putchar(i);
 i++;
+}
+while (n <= 102)      /*Print lowercase letters 'a' to 'f'*/
+{
 putchar(n);
 n++;
 }
-
 /* Print a newline character */
 putchar('\n');
 

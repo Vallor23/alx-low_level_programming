@@ -30,16 +30,16 @@ putchar(digit1 + '0');
 /* Print the second digit */
 putchar(digit2 + '0');
 /* Print a comma and space separator */
-putchar(',');
-putchar(' ');
 
 /* Print a newline if not the last combination */
 if (!(digit1 == 8 && digit2 == 9))
 {
+/* Print a comma and space separator */
+putchar(',');
+putchar(' ');
+}
+}
+}
 putchar('\n');
-}
-}
-}
-
 return (0);
 }

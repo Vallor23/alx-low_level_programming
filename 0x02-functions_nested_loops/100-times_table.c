@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -7,34 +8,43 @@
  */
 void print_times_table(int n)
 {
-if (n < 0 || n > 15)
+if (n < 0 && n > 15)
+return; /* Do nothing if n is out of range*/
+
+int row, column, product;
+
+for (row = 0; row <= n; row++)
 {
-return; // Do nothing if n is out of the valid range
+for (column = 0; column <= n; column++)
+{
+product = row * column;
+if (column == 0)
+{
+putchar('0' + product); /* Print the first digit */
+}
+else
+{
+putchar(',');
+putchar(' ');
+
+if (product < 10)
+{
+putchar(' '); /* Add a space for single-digit numbers */
+}
+else if (product < 100)
+{
+putchar('0' + (product / 10)); /* Print the tens digit */
+}
+else
+{
+putchar('0' + (product / 100)); /* Print the hundreds digit */
+putchar('0' + ((product / 10) % 10)); /* Print the tens digit */
 }
 
-int i, j;
+putchar('0' + (product % 10)); /* Print the ones digit */
+}
+}
+putchar('\n');
+}
+}
 
-for (i = 0; i <= n; i++)
-{
-for (j = 0; j <= n; j++)
-{
-int result = i * j;
-if (j > 0)
-{
-printf(", "); // Add a comma and space before each number (except the first)
-}
-if (result < 10)
-{  
- printf("  %d", result); // Single-digit number with two leading spaces
-} else if (result < 100)
-{
-printf(" %d", result); // Two-digit number with one leading space
-} else
-{
-
-printf("%d", result); // Three-digit number with no leading space
-}
-}
-printf("\n"); // Newline after each row
-}
-}

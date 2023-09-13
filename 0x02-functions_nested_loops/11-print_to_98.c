@@ -7,31 +7,37 @@
  */
 void print_to_98(int n)
 {
-int i;
+int row, column, product;
+ if (n < 0 || n > 15)
+        return;
+ for (row = 0; row <= n; row++)
+    {
+        for (column = 0; column <= n; column++)
+        {
+            product = row * column;
 
-if (n <= 98)
-{
-for (i = n; i <= 98; i++)
-{
-printf("%d", i);
-if (i != 98)
-{
-printf(", ");
-}
-}
-}
-else
-{
-for (i = n; i >= 98; i--)
-{
-printf("%d", i);
-if (i != 98)
-{
-printf(", ");
-}
-}
-}
+            if (column != 0)
+            {
+                _putchar(',');
+_putchar(' ');
+            }
 
-printf("\n");
+            if (product < 10)
+            {
+                _putchar(' ');
+_putchar(' ');
+}
+else if (product < 100)
+{
+_putchar(' ');
+}
+if (product >= 100)
+_putchar('0' + product / 100);
+if (product >= 10)
+_putchar('0' + (product / 10) % 10);
+_putchar('0' + produt % 10);
+}
+_putchar('\n');
+}
 }
 

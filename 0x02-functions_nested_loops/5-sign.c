@@ -1,34 +1,29 @@
 #include "main.h"
 
 /**
- * Prints the sign of a given integer.
+ * print_sign - Prints the sign of a number.
+ * @n: The number to check.
  *
- * This function takes an integer as input and prints the sign of the integer.
- * It returns 1 and prints '+' if the input is greater than zero,
- * returns 0 and prints '0' if the input is zero,
- * returns -1 and prints '-' if the input is less than zero.
- *
- * @param n The integer for which the sign needs to be printed.
- * @return 1 if n > 0, 0 if n == 0, -1 if n < 0.
+ * Return: 1 and prints '+' if n is greater than zero.
+ *         0 and prints '0' if n is zero.
+ *        -1 and prints '-' if n is less than zero.
  */
 int print_sign(int n)
 {
 if (n > 0)
 {
-_putchar('+');
-_putchar('\n');
+_putchar('+');  /* Print '+' for positive number */
 return (1);
 }
 else if (n == 0)
 {
-_putchar('0');
-_putchar('\n');
+_putchar('0'); /* Print '0' for zero */
 return (0);
 }
 else
 {
-_putchar('-');
-_putchar('\n');
+_putchar('-'); /* Print '-' for negative number */
 return (-1);
 }
+_putchar('\n');
 }

@@ -1,38 +1,38 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * times_table - Prints the 9 times table,
- * starting with 0, in the desired format.
+ * times_table - Prints the 9 times table, starting with 0.
  */
 void times_table(void)
 {
-int i, j, result;
+int row, column, product;
 
-for (i = 0; i <= 9; i++)
+for (row = 0; row <= 9; row++)
 {
-for (j = 0; j <= 9; j++)
-result = i * j;
+for (column = 0; column <= 9; column++)
 {
-/* Print comma and spaces before each number */
-if (j > 0) {
+product = row * column;
+
+if (column == 0)
+{
+putchar('0');
+}
+else
+{
 putchar(',');
 putchar(' ');
 }
 
-/* Print each digit of the result */
- if (result < 10)
+if (product < 10)
 {
-putchar(' ');
-} else
+putchar(' '); /* Add space for single-digit numbers */
+}
+else
 {
-putchar(result / 10 + '0');
-{
-putchar(result % 10 + '0');
-/* Print a newline character at the end of each row */        
+putchar((product / 10) + '0'); /* Print the tens digit */
+}
+putchar((product % 10) + '0'); /* Print the ones digit */
+}
 putchar('\n');
 }
 }
-}
-}
-}
-

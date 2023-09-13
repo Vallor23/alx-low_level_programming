@@ -21,16 +21,13 @@ product = row * column;
 if (column != 0)
 {
 _putchar(',');
+_putchar(' ');
 }
 if (product < 10)
-{
 _putchar(' ');
+if (product < 100)
 _putchar(' ');
-}
-else if (product < 100)
-{
-_putchar(' ');
-}
+
 if (product >= 100)
 _putchar('0' + product / 100);
 if (product >= 10)

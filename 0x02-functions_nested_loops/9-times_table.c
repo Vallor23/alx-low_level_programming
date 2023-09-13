@@ -15,13 +15,13 @@ product = row * column;
 
 if (column == 0)
 {
-putchar('0');
+putchar('0' + product); /* Print the first digit */
 }
 else
 {
 putchar(',');
 putchar(' ');
-}
+
 
 if (product < 10)
 {
@@ -32,6 +32,7 @@ else
 putchar((product / 10) + '0'); /* Print the tens digit */
 }
 putchar((product % 10) + '0'); /* Print the ones digit */
+}
 }
 putchar('\n');
 }

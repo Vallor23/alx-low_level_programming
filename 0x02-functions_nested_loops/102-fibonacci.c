@@ -12,15 +12,15 @@
  */
 int main(void)
 {
-long long int fib1 = 1, fib2 = 2, next;
+long int fib1 = 1, fib2 = 2, next;
 int count, maxCount = 50;
 
-printf("%lld, %lld", fib1, fib2);
+printf("%ld, %ld", fib1, fib2);
 
 for (count = 3; count <= maxCount; count++)
 {
 next = fib1 + fib2;
-printf(", %lld", next);
+printf(", %ld", next);
 fib1 = fib2;
 fib2 = next;
 }

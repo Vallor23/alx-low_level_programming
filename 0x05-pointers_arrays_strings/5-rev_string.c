@@ -7,29 +7,28 @@
  */
 void rev_string(char *s)
 {
-    if (s == NULL)
-        return;
+int length = 0;
+int start = 0;
+int end = 0;
 
-    int length = 0;
-    int start = 0;
-    int end = 0;
+if (s == NULL)
+return;
+/* Calculate the length of the string*/
+while (s[length] != '\0')
+{
+length++;
+}
 
-    // Calculate the length of the string
-    while (s[length] != '\0')
-    {
-        length++;
-    }
+end = length - 1;
 
-    end = length - 1;
-
-    // Swap characters from start to end to reverse the string
-    while (start < end)
-    {
-        char temp = s[start];
-        s[start] = s[end];
-        s[end] = temp;
-        start++;
-        end--;
-    }
+/* Swap characters from start to end to reverse the string*/
+while (start < end)
+{
+char temp = s[start];
+s[start] = s[end];
+s[end] = temp;
+start++;
+end--;
+}
 }
 

@@ -10,12 +10,11 @@
  */
 void swap_int(int *a, int *b)
 {
-    int temp;
+int temp;
 
-    if (a == NULL || b == NULL)
-        return;
-
-    temp = *a;
-    *a = *b;
-    *b = temp;
+if (a == NULL || b == NULL)
+return;
+temp = *a;
+*a = *b;
+*b = temp;
 }

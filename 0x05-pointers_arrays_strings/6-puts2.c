@@ -16,6 +16,14 @@ while (str[i] != '\0')
 {
 putchar(str[i]);
 i += 2; /*Skip every other character*/
+if (str[i] == '\0' && i % 2 == 1)
+{
+/**
+ * If the last character was skipped and it's an odd-indexed
+ *  character, break to avoid out-of-bounds
+ */
+break;
+}
 }
 
 putchar('\n');

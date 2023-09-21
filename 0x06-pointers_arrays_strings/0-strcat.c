@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
  * _strcat - Concatenate two strings.
  * @dest: Destination string where src will be appended.

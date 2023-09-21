@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strncpy - Copy at most n characters from src to dest.
  * @dest: Destination string where src will be copied.

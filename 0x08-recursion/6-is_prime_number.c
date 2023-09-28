@@ -32,6 +32,17 @@ else
 }
 return (is_prime_recursive(n, divisor - 1));
 }
+/**
+ * is_prime_number - Wrapper function to check if a number is prime.
+ * @n: The input number to be checked for primality.
+ *
+ * Description: This function calls the recursive function
+ * is_prime_recursive
+ * with an initial divisor of n - 1.
+ *
+ * Return: 1 if 'n' is a prime number, 0 otherwise.
+ */
+
 int is_prime_number(int n)
 {
 if (n <= 1)

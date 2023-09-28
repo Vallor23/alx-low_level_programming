@@ -1,40 +1,46 @@
 #include <stdio.h>
 
 /**
- * is_prime_number - Checks if a number is prime.
+ * is_prime_recursive - Checks if a number is prime recursively.
  * @n: The input number to be checked for primality.
+ * @divisor: The current divisor to test divisibility.
  *
- * Description: This function determines whether a
- * positive integer 'n' is a prime number.
+ * Description: This function determines whether a positive
+ * integer 'n' is a prime number.
+ * It uses recursion to test divisibility by increasing divisors
+ * starting from 2.
  *
  * Return: 1 if 'n' is a prime number, 0 otherwise.
  */
+int is_prime_recursive(int n, int divisor)
+{
+if (n <= 1)
+{
+return (0); /* Numbers less than or equal to 1 are not prime*/
+}
+else if (divisor == 1)
+{
+return (1); /* 2 and 3 are prime numbers*/
+}
+else if (n % divisor == 0)
+{
+return (0); /*Not a prime number if divisible by divisor*/
+}
+else
+{
+/*Recursively check with the next divisor*/
+}
+return (is_prime_recursive(n, divisor - 1));
+}
 int is_prime_number(int n)
 {
 if (n <= 1)
 {
-return (0); /*Numbers less than or equal to 1 are not prime*/
-}
-else if (n <= 3)
-{
-return (1); /* 2 and 3 are prime numbers*/
-}
-else if (n % 2 == 0 || n % 3 == 0)
-{
-return (0); /*Numbers divisible by 2 or 3 are not prime*/
+return (0); /*0 and 1 are not prime numbers*/
 }
 else
 {
-int i;
-/*Check for divisibility by numbers of the form 6k ± 1*/
-for (i = 5; i * i <= n; i += 6)
-{
-if (n % i == 0 || n % (i + 2) == 0)
-{
-return (0); /*Not a prime number*/
+/*Start checking divisibility from n - 1*/
+return (is_prime_recursive(n, n - 1));
 }
 }
-return (1); /*Prime number*/
-}
-}
-

@@ -10,10 +10,8 @@
  * Return: The natural square root of 'n', or -1 if 'n'
  * does not have a natural square root.
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursive(int n, int guess)
 {
-int result = -1;
-int i;
 if (n < 0)
 {
 return (-1); /*Return -1 for negative input as an error indicator*/
@@ -24,17 +22,19 @@ return (n); /*Base cases: square root of 0 is 0, square root of 1 is 1*/
 }
 else
 {
-/*Iterate from 1 to n/2 to find the square root*/
-for (i = 1; i <= n / 2; i++)
+	return _sqrt_recursive(n, guess + 1); /*Recursive calculation: Increase guess*/
+    }
+}
+/**
+ * _sqrt_recursion - Wrapper function to find the square root.
+ * @n: The input number for which to calculate the square root.
+ *
+ * Description: This function is a wrapper that sets up the initial guess for
+ * finding the square root of 'n' using recursion.
+ *
+ * Return: The natural square root of 'n', or -1 if 'n' does not have a natural square root.
+ */
+int _sqrt_recursion(int n)
 {
-if (i * i == n)
-{
-result = i;
-break; /*Square root found, exit the loop*/
+    return _sqrt_recursive(n, 0); /*start with an initial guess of 0*/
 }
-}
-
-return (result);
-}
-}
-

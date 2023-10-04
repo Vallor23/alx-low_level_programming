@@ -27,7 +27,7 @@ for (i = 1; i < argc; i++)
 int num = atoi(argv[i]);
 
 /* Check if the argument contains non-digit characters */
-if (num == 0 && argv[i][0] != '0')
+if (num == 0 && argv[i][0] != '-')
 {
 hasNonDigit = true;
 break;

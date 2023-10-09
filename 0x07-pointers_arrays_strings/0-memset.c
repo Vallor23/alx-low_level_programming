@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -22,23 +23,3 @@ if (s == NULL || n == 0) {
 
     return start;
 }
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main() {
-    char buffer[10];
-    char *result;
-
-    result = _memset(buffer, 'A', 5);
-
-    if (result != NULL) {
-        printf("Memory filled: %s\n", result);
-    } else {
-        printf("Memory filling failed.\n");
-    }
-
-    return 0;
-}
-

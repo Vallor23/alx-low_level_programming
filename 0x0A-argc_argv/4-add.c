@@ -1,7 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-
+#include <ctype.h>
+#include <string.h>
+/**
+ * main - Entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
+ * Return: always 0 (sucess)
+ */
+int check_num(char *str)
+{
+int i;
+    	for (i = 0; i < strlen(str); i++) {
+        if (!isdigit(str[i])) {
+            return 0;
+        }
+    }
+    return 1;
+}
 /**
  * main - Entry point of the program.
  * @argc: The number of command-line arguments.
@@ -11,45 +27,18 @@
  */
 int main(int argc, char *argv[])
 {
-int sum = 0;
-bool hasNonDigit = false;
+    int sum = 0;
 int i;
-/* Check if there are no numbers provided */
-if (argc == 1)
-{
-printf("0\n");
-return (0);
-}
-
-/* Iterate through command-line arguments and add positive numbers */
-for (i = 1; i < argc; i++)
-{
-int num = atoi(argv[i]);
-
-/* Check if the argument contains non-digit characters */
-if (num == 0 && argv[i][0] != '-')
-{
-hasNonDigit = true;
-break;
-}
-
-/* Check if the number is positive */
-if (num > 0)
-{
-sum += num;
-}
-}
-
-/* Print the result or an error message */
-if (hasNonDigit)
-{
-printf("Error\n");
-return (1);
-}
-else
-{
-printf("%d\n", sum);
-return (0);
-}
+    for (i = 1; i < argc; i++) {
+        if (check_num(argv[i])) {
+            int str_to_int = atoi(argv[i]);
+            sum += str_to_int;
+        } else {
+            printf("Error\n");
+            return 1;
+        }
+    }
+    printf("%d\n", sum);
+    return 0;
 }
 

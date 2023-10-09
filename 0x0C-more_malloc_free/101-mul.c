@@ -1,38 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include "main.h"
 /**
  * isAllDigits - Checks if a string contains only digits
  * @str: The string to check
  *
  * Return: 1 if all characters are digits, 0 otherwise
  */
-int isAllDigits(char *str)
-{
-while (*str)
-{
-if (!isdigit(*str))
-{
-return (0);
-}
-str++;
-{
-return (1);
-}
+int isAllDigits(char *str);
 /**
- * multiply - Multiplies two positive numbers and prints the result
- * @num1: The first number as a string
- * @num2: The second number as a string
+ * main - Entry point of the program
+ * @argc: The number of command-line arguments
+ * @argv: An array of command-line argument strings
+ *
+ * Return: 0 if successful, 98 if there are errors
  */
-void multiply(char *num1, char *num2)
+int main(int argc, char *argv[])
 {
-int len1 = 0, len2 = 0, i, j;
-int *result;
-int carry = 0;
-int startIndex;
-if (!isAllDigits(num1) || !isAllDigits(num2))
-{
-printf("Error\n");
-exit(98);
+    if (argc != 3)
+    {
+        printf("Error\n");
+        return 98;
+    }
+
+    char *num1 = argv[1];
+    char *num2 = argv[2];
+    for (int i = 0; num1[i]; i++)
+    {
+        if (!isdigit(num1[i]))
+        {
+            printf("Error\n");
+            return 98;
+        }
+    }
+
+    for (int i = 0; num2[i]; i++)
+    {
+        if (!isdigit(num2[i]))
+        {
+            printf("Error\n");
+            return 98;
+        }
+    }
+
+    int result = atoi(num1) * atoi(num2);
+
+    printf("%d\n", result);
+
+    return 0;
 }
+

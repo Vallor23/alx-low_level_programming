@@ -16,6 +16,10 @@ char *name;
 float age;
 char *owner;
 };
+/*Define a new type dog_t as an alias for struct dog*/
+typedef struct dog dog_t;
+
+
 /**
  * init_dog - Initializes a variable of type struct dog
  * @d: Pointer to struct dog to initialize
